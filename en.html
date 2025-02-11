@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정승원 | Python Backend Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .job, .project {
+            margin-bottom: 15px;
+        }
+        .job h3, .project h3 {
+            margin-bottom: 5px;
+        }
+        .date {
+            font-style: italic;
+            color: #666;
+        }
+        .black-white {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SeungWon Jeong</h1>
+        <p>010-2238-0476 | recordable0711@gmail.com</p>
+        <p>I'm Python FastAPI / Django based backend engineer with 5 years of experience. I designed mostly OLTP systems on 8 million MAU service.</p>
+    </header>
+
+    <section class="section">
+        <h2>Work Experience</h2>
+        <div class="job">
+            <h3>Yogiyo(WESANG)</h3>
+            <p class="date">2021-01 ~ 2024-09</p>
+
+            <h4>Yogiyo Home (2021-01 ~ 2023-11)</h4>
+            <ul>
+                <li>주문 전환 퍼널 가장 앞. 분당 최대 22000 건의 트래픽을 받는 요기요 홈 Micro Service "Frontyo" 를 주도적으로 설계하고 개발</li>
+                    <ul>
+                        <li>주요 참여인원: 백엔드 2, 안드로이드 2, IOS 2, 디자이너 1 (총 7명)</li>
+                    </ul>
+                <li>공로를 인정 받아 <strong  class="black-white">2022 WESANG AWARD 대상 수상</strong></li>
+                <li>테스트 커버리지 90% 달성 및 유지</li>
+                <li>
+                    대규모 트래픽 처리와 <strong>asyncio</strong>
+                    <ul>
+                        <li>9 건이 넘는 API 를 호출해도 300 ms (p95) 이내에 응답하는 극한의 병렬처리</li>
+                        <li>asyncio gather() 와 as_completed() 로 latency 를 줄였습니다.</li>
+                        <li>as_completed() 를 활용해 병렬 요청중 일부만 완수되었을때도 미리 작업을 시작할 수 있도록 설계</li>
+                    </ul>
+                </li>
+                <li><a href="https://techblog.yogiyo.co.kr/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-server-driven-ui-%EA%B0%9C%EB%B0%9C%EA%B8%B0-b1b80f47760b">사내 기술 블로그</a> 작성</li>
+            </ul>
+
+            <h4>Yogiyo Pay (2023-11 ~ 2024-09)</h4>
+            <ul>
+                <li>주문 전환 퍼널 가장 뒤. 분당 최대 8220 건의 트래픽을 받는 요기요 결제 시스템 유지보수</li>
+                <li>ec2 -> eks migration</li>
+                <li>2023년 KBPay 결제수단 도입으로 총 5.4 억원의 마케팅 예산 확보</li>
+                <li>영중소 신용카드 수수료 차액정산 배치 개발</li>
+                <li>요기패스 X 네이버페이 런칭시 2천만건이 넘는 기존 정기결제 데이터와 정기결제 키를 새로운 데이터베이스로 마이그레이션</li>
+            </ul>
+        </div>
+        <div class="job">
+            <h3>레터플라이</h3>
+            <p class="date">2017-08 ~ 2018-05</p>
+            <ul>
+                <li>Angular 1 & Flask Dev</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <h3>Production Grade MongoDB Query tunings and Geospatial search</h3>
+        <p>Inflearn course: "how food delivery apps can find restaurants near you?"</p>
+        <ul>
+            <li><a href="https://inf.run/RNYct">https://inf.run/RNYct</a></li>
+            <li>Geospatial search with Google S2. Forget complicated geometric operations.</li>
+            <li>Redis Cache without TTL: cache without inconsistency between database</li>
+            <li>Distinct 쿼리 대신 튜닝한 쿼리를 asyncio gather() 로 병렬로 실행하는 기법으로 기존 쿼리 대비 2배 이상의 성능 향상</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Features</h2>
+
+        <h3>Various Incident Experiences and Resolutions</h3>
+        <p>기상천외한 장애들을 직&간접적으로 체험하고 해결방법을 배우고 또 고안했습니다.</p>
+        <ul>
+            <li>auto increment 컬럼이 max 값에 도달해 더 이상 추가 row 가 생성되지 않는 장애</li>
+            <li>pickle 대상의 python class 에 필드가 추가되었을 때 발생하는 캐시 장애</li>
+        </ul>
+
+        <h3>불일치 없는 캐싱전략</h3>
+        <ul>
+            <li>TTL 에만 의존하는 대신, 원천 데이터 변경 시점에 cache 를 제거. cache 불일치 문제를 해결.</li>
+            <li>Frontyo, 인프런 강의에 모두 적용된 기술.</li>
+        </ul>
+
+        <h3>습관화된 비효율의 자동화</h3>
+        <ul>
+            <li>
+                기존에는 매일 주말및 공휴일이 끝날 때 마다 영중소 카드 수수료 차액 정산 배치를 개발자가 직접 실행시켜야 했습니다.
+                <ul>
+                    <li>업무시간 외에 짬을 내서 "휴일 다음날" 에만 수행되는 배치를 개발. 반복적인 단순 업무를 제거했습니다.</li>
+                </ul>
+            </li>
+            <li>
+                레거시 개발환경 설치가 하루가 넘게 걸리는 문제를 해결하기 위해 자동화 스크립트를 만들었습니다. <a href="https://techblog.yogiyo.co.kr/%ED%95%9C-%EB%B0%A9-%EC%98%A8%EB%B3%B4%EB%94%A9-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-305bd693f780">(기술블로그)</a>
+            </li>
+        </ul>
+
+        <h3>I care business Impact</h3>
+        <ul>
+            <li>카타르 Worldcup 때 치킨 카테고리의 이미지에 축구공을 그려넣자고 제안해 각종 커뮤니티에서 좋은 반응을 얻었습니다.</li>
+            <li>사내 아이디어 공모전에서 "공유 배달" 을 주제로 데모 어플리케이션을 출품해 참가상을 받았습니다.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Open Source Contribution</h2>
+        <ul>
+            <li>
+                I <a href="https://github.com/python/mypy/pull/18358"> made </a> <strong class="black-white">Mypy</strong> to support nesting of classvar and final from python 3.13 onward.
+            </li>
+            <li>
+                I <a href="https://github.com/sqids/sqids-python/pull/25">Elaborated</a> type hint of Sqids' python library.
+            </li>
+            <li>
+                I <a href="https://github.com/tortoise/tortoise-orm/pull/1286">contributed</a> tortoise orm: the python async orm.
+            </li>
+            <li>
+                I <a href="https://github.com/edgedb/easy-edgedb/pull/124">contributed</a> edgedb, the next generation database created by python core contributors.
+            </li>
+            <li>
+                I fixed a <a href="https://github.com/mmistakes/minimal-mistakes/pull/2042">bug</a> concerning Korean in the popular github blog theme "minimal mistake".
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Technical Stack</h2>
+        <h3>Can use them in production right away...</h3>
+        <ul>
+            <li>Python</li>
+            <li>Python asyncio</li>
+            <li>FastAPI</li>
+            <li>Django</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>EdgeDB</li>
+            <li>Pytest</li>
+        </ul>
+        <h3>I have experience on them...</h3>
+        <ul>
+            <li>Kubernetes</li>
+            <li>Apache Kafka</li>
+            <li>Java Spring</li>
+            <li>ELK Stack</li>
+            <li>Datadog</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Certificates</h2>
+        <ul>
+            <li>Toeic 955</li>
+            <li>JLPT N3</li>
+            <li>Certified Kubernetes Administrator(CKA)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <h3>Incheon National University</h3>
+        <p class="date">2015-03 ~ 2022-02</p>
+        <ul>
+            <li>International Trade / Computer Science</li>
+            <li>GPA 4.00</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Global Experience</h2>
+        <h3>Vietnam outsourcing "sotatek"</h3>
+        <p class="date">2022-11 ~ 2023-11</p>
+        <ul>
+            <li>I Collaborated with people in "Sotatek" without translator. (I am proficient in both written and spoken English)</li>
+            <li>January 2023, I visited <a href="https://www.sotatek.com/">sotatek</a> (hanoi) on behalf of my team. I onboarded 6 people to yogiyo, explained the whole system in english</li>
+        </ul>
+    </section>
+</body>
+</html>
