@@ -54,18 +54,18 @@
 
             <h4>Yogiyo Home (2021-01 ~ 2023-11)</h4>
             <ul>
-                <li>주문 conversion funnel 가장 앞. 분당 최대 22000 건의 트래픽을 받는 요기요 홈 Micro Service "Frontyo" 를 주도적으로 설계하고 개발</li>
+                <li>I created "Frontyo", a micro service can handle up to 22000 requests per minute, which serves as a API aggregator for Yogiyo Home screen.</li>
                     <ul>
-                        <li>주요 참여인원: 백엔드 2, 안드로이드 2, IOS 2, 디자이너 1 (총 7명)</li>
+                        <li>Squad members: 2 backend devs, 2 android devs, 2 ios devs, 1 designer (total 7)</li>
                     </ul>
-                <li>공로를 인정 받아 <strong  class="black-white">2022 WESANG AWARD 대상 수상</strong></li>
-                <li>I reached and maintained 90% of test coverage.</li>
+                <li>Winner of <strong  class="black-white">2022 WESANG AWARD</strong></li>
+                <li>I maintained 90% of test coverage.</li>
                 <li>
-                    대규모 트래픽 처리와 <strong>asyncio</strong>
+                    Large traffic handling and <strong>asyncio</strong>
                     <ul>
-                        <li>9 건이 넘는 API 를 호출해도 300 ms (p95) 이내에 응답하는 극한의 병렬처리</li>
-                        <li>asyncio gather() 와 as_completed() 로 latency 를 줄였습니다.</li>
-                        <li>as_completed() 를 활용해 병렬 요청중 일부만 완수되었을때도 미리 작업을 시작할 수 있도록 설계</li>
+                        <li>Extreme concurrent processing capable of responding within 300ms (p95) even when calling over 9 APIs.</li>
+                        <li>Reduced latency with asyncio gather() and as_completed().</li>
+                        <li>Designed to enable early task initiation even with partial completion of parallel requests by utilizing as_completed()</li>
                     </ul>
                 </li>
                 <li><a href="https://techblog.yogiyo.co.kr/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-server-driven-ui-%EA%B0%9C%EB%B0%9C%EA%B8%B0-b1b80f47760b">사내 기술 블로그</a> 작성</li>
